@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 import Button from "@/components/Button";
 
 // Add your email address here!
-const RECEIVER_EMAIL = "sattvayogaclasses@gmail.com"; 
+const RECEIVER_EMAIL = "vanshv0920@gmail.com@gmail.com"; 
 
 export default function ContactForm() {
   const [name, setName] = useState("");

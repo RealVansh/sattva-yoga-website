@@ -12,7 +12,7 @@ type EnquiryModalProps = {
 };
 
 // Add your email address here!
-const RECEIVER_EMAIL = "sattvayogaclasses@gmail.com";
+const RECEIVER_EMAIL = "vanshv0920@gmail.com@gmail.com";
 
 export default function EnquiryModal({ isOpen, onClose, className, batchName, batchTime }: EnquiryModalProps) {
   const [name, setName] = useState("");

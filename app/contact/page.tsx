@@ -17,7 +17,7 @@ const contactSeoSchema = {
   description:
     "Contact Sattva Yoga Classes for personal, prenatal, group, and corporate yoga sessions in Tambaram, Chennai.",
   telephone: "+91 9941764814",
-  email: "sattvayogaclasses@gmail.com",
+  email: "vanshv0920@gmail.com@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "9/25, Duraisamy Nagar, East Tambaram",
