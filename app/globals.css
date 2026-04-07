@@ -1,26 +1,224 @@
 @import "tailwindcss";
 
+/* ── Brand Palette ─────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cream */
+  --cream-50: #FEFAF6;
+  --cream-100: #FCF3EC;
+  --cream-200: #F5E6D6;
+  --cream-300: #EBCDB3;
+  --cream-400: #D4A87A;
+
+  /* Olive Green */
+  --green-50: #F2F5E0;
+  --green-100: #E0E8B8;
+  --green-200: #C5D56A;
+  --green-300: #A1B83E;
+  --green-400: #7F9326;
+  --green-500: #637220;
+  --green-600: #4A5518;
+
+  /* Gold */
+  --gold-50: #FFF8E1;
+  --gold-100: #FFF4D1;
+  --gold-200: #FEE88F;
+  --gold-300: #FED456;
+  --gold-400: #E5B520;
+  --gold-500: #B08A10;
+
+  /* Brown */
+  --brown-50: #F5EDE6;
+  --brown-100: #D4B89A;
+  --brown-200: #C8A07A;
+  --brown-300: #8B5E3C;
+  --brown-400: #5D351C;
+  --brown-500: #432714;
+  --brown-600: #2E1A0D;
+
+  /* Semantic tokens */
+  --background: var(--cream-100);
+  --foreground: var(--brown-400);
+  --surface: #FFFFFF;
+  --surface-warm: var(--cream-50);
+  --accent: var(--green-400);
+  --accent-light: var(--green-50);
+  --highlight: var(--gold-300);
+  --highlight-light: var(--gold-50);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-highlight: var(--highlight);
+  --color-highlight-light: var(--highlight-light);
+
+  /* Brand color tokens for Tailwind classes */
+  --color-brand-cream-50: var(--cream-50);
+  --color-brand-cream-100: var(--cream-100);
+  --color-brand-cream-200: var(--cream-200);
+  --color-brand-cream-300: var(--cream-300);
+  --color-brand-cream-400: var(--cream-400);
+
+  --color-brand-green-50: var(--green-50);
+  --color-brand-green-100: var(--green-100);
+  --color-brand-green-200: var(--green-200);
+  --color-brand-green-300: var(--green-300);
+  --color-brand-green-400: var(--green-400);
+  --color-brand-green-500: var(--green-500);
+  --color-brand-green-600: var(--green-600);
+
+  --color-brand-gold-50: var(--gold-50);
+  --color-brand-gold-100: var(--gold-100);
+  --color-brand-gold-200: var(--gold-200);
+  --color-brand-gold-300: var(--gold-300);
+  --color-brand-gold-400: var(--gold-400);
+  --color-brand-gold-500: var(--gold-500);
+
+  --color-brand-brown-50: var(--brown-50);
+  --color-brand-brown-100: var(--brown-100);
+  --color-brand-brown-200: var(--brown-200);
+  --color-brand-brown-300: var(--brown-300);
+  --color-brand-brown-400: var(--brown-400);
+  --color-brand-brown-500: var(--brown-500);
+  --color-brand-brown-600: var(--brown-600);
+
+  --font-sans: var(--font-nunito);
+  --font-heading: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ──────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), sans-serif;
+}
+
+::selection {
+  background: var(--gold-200);
+  color: var(--brown-500);
+}
+
+/* Headings use Playfair Display */
+h1, h2, h3, h4 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* ── Animations ────────────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(127, 147, 38, 0.15); }
+  50% { box-shadow: 0 0 20px 4px rgba(127, 147, 38, 0.1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out both;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out both;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* ── Decorative Elements ───────────────────────────── */
+.gold-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-300), var(--gold-200));
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+.gold-divider-centered {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-300), var(--gold-200));
+  border-radius: 2px;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cream-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-200);
+}
+
+/* ── Focus Styles ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--green-400);
+  outline-offset: 2px;
 }

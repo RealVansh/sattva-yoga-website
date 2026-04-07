@@ -1,65 +1,217 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+
+import Button from "@/components/Button";
+import ClassCard from "@/components/ClassCard";
+import HeroSection from "@/components/HeroSection";
+import ScrollSpyNav from "@/components/ScrollSpyNav";
+import SectionTitle from "@/components/SectionTitle";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import { classes, testimonials } from "@/data/siteData";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Transform your body and mind with Sattva Yoga Classes through holistic private, online, and corporate sessions. Yoga classes in Tambaram, Chennai.",
+};
+
+const homeSeoSchema = {
+  "@context": "https://schema.org",
+  "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+  name: "Sattva Yoga Classes",
+  description:
+    "Personal yoga, group sessions, prenatal guidance, and corporate wellness in Tambaram, Chennai.",
+  telephone: "+91 9941764814",
+  email: "sattvayogaclasses@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9/25, Duraisamy Nagar, East Tambaram",
+    addressLocality: "Chennai",
+    postalCode: "600059",
+    addressCountry: "IN",
+  },
+  areaServed: ["Tambaram", "Chennai"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 12.920822,
+    longitude: 80.1282402,
+  },
+  hasMap:
+    "https://www.google.com/maps/place/Sattva+Yoga+Classes/data=!4m7!3m6!1s0x3a525f003fe9bc07:0xbdd0cd6f1037170d!8m2!3d12.920822!4d80.1282402!16s%2Fg%2F11x97jvtp3",
+};
+
+const benefits = [
+  {
+    title: "Targeted Healing",
+    description:
+      "Relief from chronic issues like neck, back, and shoulder pain, with specialized support for conditions like cervical and thyroid imbalances.",
+    icon: (
+      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Personalized Attention",
+    description:
+      "Customized routines tailored to your individual needs, flexibility, and pace, ensuring you progress safely and comfortably.",
+    icon: (
+      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Engaging Variety",
+    description:
+      "No repetitive cycles. Enjoy a completely different flow of stretches and asanas every day to continuously challenge and strengthen your body.",
+    icon: (
+      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+      </svg>
+    ),
+  },
+  {
+    title: "Flexible & Calming",
+    description:
+      "Convenient session timings designed for busy routines, cultivating deep patience, calmness, and a refreshed mind every single day.",
+    icon: (
+      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSeoSchema) }}
+      />
+      <ScrollSpyNav />
+      <HeroSection />
+
+      {/* About Preview */}
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24">
+        <div className="animate-fade-in">
+          <SectionTitle
+            eyebrow="About"
+            title="Personalized yoga rooted in holistic wellness"
+            description="Sattva Yoga Classes helps you build consistency through mindful movement, breathwork, and practical routines that fit your life."
+          />
+        </div>
+        <p className="mt-6 max-w-3xl leading-7 text-brand-brown-200 animate-fade-in delay-200">
+          Whether you are starting from zero or returning to practice, each
+          session is adapted to your body, goals, and energy levels. Classes
+          combine posture alignment, mobility, and calming techniques to support
+          long-term physical and mental well-being. If you are searching for
+          yoga classes in Tambaram, Chennai, Sattva Yoga Classes offers both
+          personal and group formats with focused guidance.
+        </p>
+        <div className="mt-6 animate-fade-in delay-300">
+          <Button href="/about" variant="secondary">
+            Learn More About the Instructor
+          </Button>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section id="benefits" className="bg-white py-20 scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <SectionTitle
+            eyebrow="Benefits"
+            title="Why students choose Sattva Yoga Classes"
+            centered
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((benefit, index) => (
+              <article
+                key={benefit.title}
+                className="group rounded-2xl border border-brand-cream-200 bg-brand-cream-50 p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-brand-gold-200 animate-fade-in-up"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green-50 text-brand-green-400 transition-all duration-300 group-hover:bg-brand-gold-50 group-hover:text-brand-gold-400">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-bold text-brand-brown-400">
+                  {benefit.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-brand-brown-200">
+                  {benefit.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Classes Preview */}
+      <section id="classes" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24">
+        <SectionTitle
+          eyebrow="Classes"
+          title="Find the right class for your goals"
+          description="From beginner flows to corporate wellness sessions, programs are designed for real progress."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
+          {classes.map((item, index) => (
+            <div key={item.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+              <ClassCard yogaClass={item} />
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="bg-white py-20 overflow-hidden scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <SectionTitle
+            eyebrow="Testimonials"
+            title="What students are saying"
+            description="Real feedback from students who transformed their wellness journey with Sattva Yoga Classes."
+            centered
+          />
         </div>
-      </main>
-    </div>
+        <div className="mt-12 w-full">
+          <TestimonialCarousel testimonials={testimonials} />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24" id="contact">
+        <div className="rounded-3xl bg-gradient-to-br from-brand-green-400 to-brand-green-600 px-8 py-12 text-white shadow-xl sm:px-12 relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-brand-gold-300/10 blur-2xl" />
+          <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/5 blur-2xl" />
+
+          <div className="relative">
+            <h2 className="text-3xl font-bold tracking-tight">
+              Join a session today
+            </h2>
+            <p className="mt-3 max-w-2xl text-brand-green-100/90">
+              Book a free trial and start your personalized yoga journey with
+              calm, consistency, and confidence.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button
+                href="/contact"
+                variant="secondary"
+                className="bg-white/15 text-white ring-white/30 hover:bg-white/25 hover:ring-white/50"
+              >
+                Contact Now
+              </Button>
+              <Button
+                href="https://wa.me/919941764814"
+                variant="secondary"
+                className="bg-white/15 text-white ring-white/30 hover:bg-white/25 hover:ring-white/50"
+              >
+                WhatsApp Inquiry
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
