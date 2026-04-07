@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sattva Yoga Classes
+
+A modern, responsive yoga website built with Next.js App Router, TypeScript, and Tailwind CSS.
+
+## Overview
+
+This site is designed for a yoga instructor to present classes, build trust, and convert visitors into trial bookings, WhatsApp inquiries, and corporate leads.
+
+## Features
+
+- Home page with hero, benefits, classes preview, testimonials, and CTA
+- About page with instructor story, certifications, and philosophy
+- Classes page with beginner, group, weekend, and prenatal offerings
+- Corporate yoga page for workplace wellness inquiries
+- Gallery page for class and workshop photos
+- Contact page with form, WhatsApp link, and Google Maps embed
+- Local SEO metadata and JSON-LD structured data
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Google Fonts
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` - route pages and layouts
+- `components/` - reusable UI components
+- `public/` - static assets, images, and gallery files
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Add new gallery photos in `public/gallery`
+- Update `app/gallery/page.tsx` when adding or removing gallery images
+- Replace the contact email or location details if they change
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## GitHub Repo Name
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If you want the GitHub repo name to reflect the project, use:
 
-## Deploy on Vercel
+- `sattva-yoga-classes`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GitHub repository names should not contain spaces.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+You can deploy this project to Vercel or any platform that supports Next.js.
