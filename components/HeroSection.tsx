@@ -38,7 +38,7 @@ export default function HeroSection() {
             Chat on WhatsApp
           </Button>
           <Button href="/contact" variant="secondary">
-            Book Free Trial
+            Contact Now
           </Button>
         </div>
 
