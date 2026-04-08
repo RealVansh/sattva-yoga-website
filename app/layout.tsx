@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description:
     "Sattva Yoga Classes offers mindful yoga sessions for beginners, wellness seekers, and corporate teams.",
+  verification: {
+    google: "934OE6vbSrcHVP79YZ2pJy5YtgqPcudSgHEoWBAglPk",
+  },
 };
 
 export default function RootLayout({
