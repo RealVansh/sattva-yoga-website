@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
  
 export default function robots(): MetadataRoute.Robots {
-  // Update this to your real domain once you buy it!
-  const baseUrl = 'https://sattvayogaclasses.vercel.app'
+  // Updated to your official domain!
+  const baseUrl = 'https://sattvayogaclasses.in'
 
   return {
     rules: {

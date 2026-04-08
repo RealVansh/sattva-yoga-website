@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Update this to your real domain once you buy it! (e.g., https://sattvayogaclasses.com)
-  const baseUrl = 'https://sattvayogaclasses.vercel.app' 
+  // Updated to your official domain!
+  const baseUrl = 'https://sattvayogaclasses.in' 
  
   return [
     {
