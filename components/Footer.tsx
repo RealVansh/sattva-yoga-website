@@ -28,7 +28,7 @@ export default function Footer() {
             9/25, Duraisamy Nagar, East Tambaram, Chennai - 600059
           </p>
           <a
-            href="https://www.google.com/maps/place/Sattva+Yoga+Classes/data=!4m7!3m6!1s0x3a525f003fe9bc07:0xbdd0cd6f1037170d!8m2!3d12.920822!4d80.1282402!16s%2Fg%2F11x97jvtp3"
+            href="https://www.google.com/maps/dir/?api=1&destination=12.920822,80.1282402"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold-300 transition-colors hover:text-brand-gold-200"
@@ -37,7 +37,7 @@ export default function Footer() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
             </svg>
-            Find us on Google Maps
+            Get Directions on Google Maps
           </a>
           <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-brand-gold-300">
             No other branches
