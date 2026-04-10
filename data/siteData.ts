@@ -19,6 +19,27 @@ export type YogaClass = {
 
 export const testimonials: Testimonial[] = [
   {
+    name: "Keerthana V",
+    rating: 5,
+    comment:"Iam truly grateful to have such an amazing yoga teacher. Her guidance, patience and positive energy make every session feel calm and meaningful. she explain each posture clearly and always motivate us to improve at our own pace without pressure. Because of her support, I feel more flexible, confident and peaceful both physically and mentally."
+  },
+  {
+    name: "Eddys Thottam",
+    rating: 5,
+    comment:"Jayanthi mam is really friendly and a caring person. My mom joined yoga because of health issues, Jayanthi mams guidance and care, my mom pain reducing day by day."  
+  },
+  {
+    name: "Ragupathy Ram",
+    rating: 5,
+    comment:
+      "Very cool yoga trainer Always explains the asanas and its benefits related to health. Multilingual and way of training is good 👍🏻 If you have any body problems, she Used to consider our request and will make asana which is the solution to your problems",
+  },
+  {
+    name: "Rajaram Doss",
+    rating: 5,
+    comment: "Easy-to-follow instructions Feeling stronger and more flexible now"
+    },
+  {
     name: "Anugraha ajay prathapp",
     rating: 5,
     comment:
