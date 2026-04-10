@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Sattva Yoga Classes",
     title: "Sattva Yoga Classes | Best Yoga Classes in Tambaram, Chennai",
     description:
-      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai. Certified instruction for all levels. Book a free trial today.",
+      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai. Certified instruction for all levels.",
     images: [
       {
         url: "/logo.png",
