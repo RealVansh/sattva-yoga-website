@@ -7,7 +7,7 @@ import SectionTitle from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Sattva Yoga Classes in Tambaram, Chennai for private yoga sessions, group class inquiries, prenatal yoga, or corporate wellness programs. Book a free trial today.",
+    "Contact Sattva Yoga Classes in Tambaram, Chennai for private yoga sessions, group class inquiries, prenatal yoga, or corporate wellness programs.",
   alternates: {
     canonical: "https://sattvayogaclasses.in/contact",
   },

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Sattva Yoga Classes",
   },
   description:
-    "Sattva Yoga Classes — one of the best yoga classes in Tambaram, Chennai. Personal, group, prenatal & corporate hatha yoga for beginners to advanced. Book a free trial today.",
+    "Sattva Yoga Classes — one of the best yoga classes in Tambaram, Chennai. Personal, group, prenatal & corporate hatha yoga for beginners to advanced.",
   keywords: [
     "yoga classes in Chennai",
     "yoga classes in Tambaram",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Sattva Yoga Classes | Best Yoga in Tambaram, Chennai",
     description:
-      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai. Book a free trial today.",
+      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai.",
     images: ["/logo.png"],
   },
   alternates: {
