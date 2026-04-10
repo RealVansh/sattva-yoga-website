@@ -18,8 +18,8 @@ export default function Footer() {
             Sattva Yoga Classes
           </h2>
           <p className="max-w-sm text-sm leading-6 text-brand-cream-300">
-            Calm, mindful yoga programs for personal wellness and corporate
-            teams.
+            Calm, mindful hatha yoga programs for personal wellness and
+            corporate teams in Tambaram, Chennai.
           </p>
           <p className="mt-4 text-sm text-brand-cream-200">
             Phone: +91 9941764814
@@ -27,6 +27,18 @@ export default function Footer() {
           <p className="mt-2 max-w-sm text-sm leading-6 text-brand-cream-200">
             9/25, Duraisamy Nagar, East Tambaram, Chennai - 600059
           </p>
+          <a
+            href="https://www.google.com/maps/place/Sattva+Yoga+Classes/data=!4m7!3m6!1s0x3a525f003fe9bc07:0xbdd0cd6f1037170d!8m2!3d12.920822!4d80.1282402!16s%2Fg%2F11x97jvtp3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-gold-300 transition-colors hover:text-brand-gold-200"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            Find us on Google Maps
+          </a>
           <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-brand-gold-300">
             No other branches
           </p>

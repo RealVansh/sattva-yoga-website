@@ -11,7 +11,10 @@ import { classes, testimonials } from "@/data/siteData";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Transform your body and mind with Sattva Yoga Classes through holistic private, online, and corporate sessions. Yoga classes in Tambaram, Chennai.",
+    "Sattva Yoga Classes — one of the best yoga classes in Tambaram, Chennai. Personalized hatha yoga for beginners, group batches, prenatal yoga & corporate wellness. Book a free trial today.",
+  alternates: {
+    canonical: "https://sattvayogaclasses.in",
+  },
 };
 
 const homeSeoSchema = {
@@ -98,16 +101,18 @@ export default function Home() {
           <SectionTitle
             eyebrow="About"
             title="Personalized yoga rooted in holistic wellness"
-            description="Sattva Yoga Classes helps you build consistency through mindful movement, breathwork, and practical routines that fit your life."
+            description="Recognized as one of the best yoga classes in Chennai, Sattva Yoga Classes helps you build consistency through mindful movement, breathwork, and practical routines that fit your life."
           />
         </div>
-        <p className="mt-6 max-w-3xl leading-7 text-brand-brown-200 animate-fade-in delay-200">
+        <p className="mt-3 max-w-3xl leading-7 text-brand-brown-200 animate-fade-in delay-200">
           Whether you are starting from zero or returning to practice, each
-          session is adapted to your body, goals, and energy levels. Classes
-          combine posture alignment, mobility, and calming techniques to support
-          long-term physical and mental well-being. If you are searching for
-          yoga classes in Tambaram, Chennai, Sattva Yoga Classes offers both
-          personal and group formats with focused guidance.
+          session is adapted to your body, goals, and energy levels. Our hatha
+          yoga classes combine posture alignment, mobility, and calming
+          techniques to support long-term physical and mental well-being.
+          Searching for yoga classes in Tambaram, Chennai? Sattva Yoga Classes
+          offers both personal and group formats with focused guidance — ideal
+          for beginners, working professionals, and anyone looking for yoga
+          for back pain, stress relief, or overall fitness in Chennai.
         </p>
         <div className="mt-6 animate-fade-in delay-300">
           <Button href="/about" variant="secondary">
@@ -122,6 +127,7 @@ export default function Home() {
           <SectionTitle
             eyebrow="Benefits"
             title="Why students choose Sattva Yoga Classes"
+            description="From yoga for beginners to advanced therapeutic sessions, here is what sets us apart."
             centered
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -150,8 +156,9 @@ export default function Home() {
       <section id="classes" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24">
         <SectionTitle
           eyebrow="Classes"
-          title="Find the right class for your goals"
-          description="From beginner flows to corporate wellness sessions, programs are designed for real progress."
+          title="Yoga classes for every goal"
+          description="From beginner flows to corporate wellness sessions, programs are designed for real progress.
+"
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
           {classes.map((item, index) => (

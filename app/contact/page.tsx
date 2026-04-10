@@ -5,9 +5,12 @@ import ContactForm from "@/components/ContactForm";
 import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
-  title: "Contact | Sattva Yoga Classes",
+  title: "Contact",
   description:
-    "Get in touch for private sessions, class inquiries, or corporate yoga programs. Yoga classes in Tambaram, Chennai.",
+    "Contact Sattva Yoga Classes in Tambaram, Chennai for private yoga sessions, group class inquiries, prenatal yoga, or corporate wellness programs. Book a free trial today.",
+  alternates: {
+    canonical: "https://sattvayogaclasses.in/contact",
+  },
 };
 
 const contactSeoSchema = {

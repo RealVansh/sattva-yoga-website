@@ -29,7 +29,7 @@ export default function HeroSection() {
 
         {/* Subtext */}
         <p className="max-w-2xl text-lg leading-8 text-brand-brown-300 animate-fade-in-up delay-400">
-          Build strength, calm your mind, and restore balance through traditional Hatha yoga sessions designed for all levels and lifestyles.
+          Build strength, calm your mind, and restore balance through traditional Hatha yoga sessions in Chennai — designed for all levels and lifestyles.
         </p>
 
         {/* Conversion CTA */}
@@ -43,12 +43,7 @@ export default function HeroSection() {
         </div>
 
         {/* Badge */}
-        <div className="-mt-4 animate-fade-in delay-200">
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-gold-100 px-5 py-2 text-sm font-semibold text-brand-brown-400 shadow-sm">
-            <span className="h-2 w-2 rounded-full bg-brand-gold-300 animate-pulse" />
-            Holistic Hatha Yoga for Mind &amp; Body
-          </span>
-        </div>
+
       </div>
     </section>
   );

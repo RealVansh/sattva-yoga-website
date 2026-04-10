@@ -4,9 +4,39 @@ import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "About | Sattva Yoga Classes",
+  title: "About",
   description:
-    "Meet Jeyanthi V, the instructor behind Sattva Yoga Classes — her journey, certifications, and philosophy of accessible wellness.",
+    "Meet Jeyanthi V — certified yoga therapist and instructor at Sattva Yoga Classes, Tambaram, Chennai. Specializing in hatha yoga, prenatal yoga, and therapeutic yoga for all levels.",
+  alternates: {
+    canonical: "https://sattvayogaclasses.in/about",
+  },
+};
+
+const aboutSeoSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jeyanthi V",
+  jobTitle: "Certified Yoga Therapist & Instructor",
+  description:
+    "Founder of Sattva Yoga Classes in Tambaram, Chennai. Certified Yoga Therapist specializing in hatha yoga, prenatal yoga, and therapeutic yoga for all levels.",
+  worksFor: {
+    "@type": "HealthAndBeautyBusiness",
+    name: "Sattva Yoga Classes",
+    url: "https://sattvayogaclasses.in",
+  },
+  knowsAbout: [
+    "Hatha Yoga",
+    "Yoga Therapy",
+    "Prenatal Yoga",
+    "Postnatal Yoga",
+    "Corporate Wellness",
+    "Mindfulness & Meditation",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Tambaram, Chennai",
+    addressCountry: "IN",
+  },
 };
 
 const milestones = [
@@ -84,6 +114,10 @@ const expertiseAreas = [
 export default function AboutPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSeoSchema) }}
+      />
       {/* ── Hero Banner ──────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-cream-200 via-brand-cream-100 to-brand-cream-50">
         <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-brand-gold-100/40 blur-3xl" />
@@ -121,7 +155,7 @@ export default function AboutPage() {
           <FadeIn delay={300} direction="up">
             <div className="gold-divider-centered mt-4" />
             <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-brand-brown-300">
-              From personal healing to transforming lives — the story behind Sattva Yoga Classes and a mission to make genuine wellness accessible to everyone.
+              From personal healing to transforming lives — the story behind one of the most trusted yoga teachers in Tambaram, Chennai, and a mission to make genuine wellness accessible to everyone.
             </p>
           </FadeIn>
         </div>
@@ -230,10 +264,10 @@ export default function AboutPage() {
               </h2>
               <div className="gold-divider" />
               <p className="mt-4 leading-7 text-brand-brown-200">
-                Over the years, Jeyanthi has worked with individuals, corporates, gyms, institutions, and young children. Her teaching adapts to each person — whether it is a working professional managing stress, a beginner building confidence, or a mother preparing for childbirth.
+                Over the years, Jeyanthi has worked with individuals, corporates, gyms, institutions, and young children. Her teaching adapts to each person, whether it is a working professional managing stress, a beginner building confidence, or a mother preparing for childbirth.
               </p>
               <p className="mt-4 leading-7 text-brand-brown-200">
-                As a Certified Yoga Therapist, she integrates mindfulness, meditation, and lifestyle guidance into every session — offering far more than just physical postures.
+                As a Certified Yoga Therapist, she integrates mindfulness, meditation, and lifestyle guidance into every session offering far more than just physical postures.
               </p>
               <div className="mt-6">
                 <Button href="/contact" variant="secondary">

@@ -17,14 +17,54 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sattvayogaclasses.in"),
   title: {
-    default: "Sattva Yoga Classes",
+    default: "Sattva Yoga Classes | Best Yoga Classes in Tambaram, Chennai",
     template: "%s | Sattva Yoga Classes",
   },
   description:
-    "Sattva Yoga Classes offers mindful yoga sessions for beginners, wellness seekers, and corporate teams.",
+    "Sattva Yoga Classes — one of the best yoga classes in Tambaram, Chennai. Personal, group, prenatal & corporate hatha yoga for beginners to advanced. Book a free trial today.",
+  keywords: [
+    "yoga classes in Chennai",
+    "yoga classes in Tambaram",
+    "best yoga classes in Chennai",
+    "hatha yoga classes Chennai",
+    "yoga for beginners Chennai",
+    "prenatal yoga Chennai",
+    "corporate yoga Chennai",
+    "yoga classes near me",
+    "yoga for back pain Chennai",
+    "yoga teacher in Tambaram",
+  ],
   verification: {
     google: "934OE6vbSrcHVP79YZ2pJy5YtgqPcudSgHEoWBAglPk",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://sattvayogaclasses.in",
+    siteName: "Sattva Yoga Classes",
+    title: "Sattva Yoga Classes | Best Yoga Classes in Tambaram, Chennai",
+    description:
+      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai. Certified instruction for all levels. Book a free trial today.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 500,
+        height: 500,
+        alt: "Sattva Yoga Classes Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Sattva Yoga Classes | Best Yoga in Tambaram, Chennai",
+    description:
+      "Personal, group, prenatal & corporate hatha yoga sessions in Tambaram, Chennai. Book a free trial today.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://sattvayogaclasses.in",
   },
 };
 

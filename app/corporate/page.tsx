@@ -4,9 +4,30 @@ import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
-  title: "Corporate Yoga | Sattva Yoga Classes",
+  title: "Corporate Yoga",
   description:
-    "Corporate yoga and wellness sessions designed to reduce stress, improve focus, and build healthier teams.",
+    "Corporate yoga programs in Chennai by Sattva Yoga Classes. On-site, hybrid & remote wellness sessions to reduce workplace stress and boost team productivity.",
+  alternates: {
+    canonical: "https://sattvayogaclasses.in/corporate",
+  },
+};
+
+const corporateSeoSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Corporate Yoga Programs",
+  provider: {
+    "@type": "HealthAndBeautyBusiness",
+    name: "Sattva Yoga Classes",
+    url: "https://sattvayogaclasses.in",
+  },
+  description:
+    "Corporate yoga and employee wellness programs in Chennai — on-site, hybrid, and remote sessions designed to reduce workplace stress and improve team productivity.",
+  areaServed: {
+    "@type": "City",
+    name: "Chennai",
+  },
+  serviceType: "Corporate Wellness & Yoga",
 };
 
 const companyBenefits = [
@@ -19,11 +40,15 @@ const companyBenefits = [
 export default function CorporatePage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(corporateSeoSchema) }}
+      />
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
         <SectionTitle
           eyebrow="Corporate Wellness"
-          title="Corporate yoga programs that support high-performing teams"
-          description="Custom sessions for organizations that want healthier employees, stronger focus, and sustainable well-being."
+          title="Corporate yoga programs for high-performing teams in Chennai"
+          description="Custom wellness sessions for organizations in Chennai that want healthier employees, stronger focus, and sustainable well-being."
         />
 
         <div className="mt-12 grid gap-8 md:grid-cols-5">
@@ -33,13 +58,14 @@ export default function CorporatePage() {
             </h2>
             <p className="mt-3 leading-7 text-brand-brown-200">
               Sessions are designed for office realities: long desk hours,
-              digital fatigue, and high cognitive load. Programs combine guided
-              movement, breathwork, and mindfulness practices adapted to your
-              team&apos;s schedule.
+              digital fatigue, and high cognitive load. Our corporate yoga in
+              Chennai combines guided movement, breathwork, and mindfulness
+              practices adapted to your team&apos;s schedule, helping
+              employees manage stress, improve posture, and stay energized
+              throughout the workday.
             </p>
             <p className="mt-3 leading-7 text-brand-brown-200">
-              Available in on-site, hybrid, and fully remote formats with
-              options for weekly, bi-weekly, or monthly engagements.
+              Available in on-site, hybrid, and fully remote formats
             </p>
           </article>
 
