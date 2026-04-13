@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Sattva Yoga Classes — one of the best yoga classes in Tambaram, Chennai. Personalized hatha yoga for beginners, group batches, prenatal yoga & corporate wellness.",
   alternates: {
-    canonical: "https://sattvayogaclasses.in",
+    canonical: "https://www.sattvayogaclasses.in",
   },
 };
 

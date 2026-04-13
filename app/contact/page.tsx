@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Contact Sattva Yoga Classes in Tambaram, Chennai for private yoga sessions, group class inquiries, prenatal yoga, or corporate wellness programs.",
   alternates: {
-    canonical: "https://sattvayogaclasses.in/contact",
+    canonical: "https://www.sattvayogaclasses.in/contact",
   },
 };
 

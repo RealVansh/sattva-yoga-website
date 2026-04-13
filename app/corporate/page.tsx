@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Corporate yoga programs in Chennai by Sattva Yoga Classes. On-site, hybrid & remote wellness sessions to reduce workplace stress and boost team productivity.",
   alternates: {
-    canonical: "https://sattvayogaclasses.in/corporate",
+    canonical: "https://www.sattvayogaclasses.in/corporate",
   },
 };
 
@@ -19,7 +19,7 @@ const corporateSeoSchema = {
   provider: {
     "@type": "HealthAndBeautyBusiness",
     name: "Sattva Yoga Classes",
-    url: "https://sattvayogaclasses.in",
+    url: "https://www.sattvayogaclasses.in",
   },
   description:
     "Corporate yoga and employee wellness programs in Chennai — on-site, hybrid, and remote sessions designed to reduce workplace stress and improve team productivity.",

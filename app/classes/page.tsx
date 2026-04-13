@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore yoga classes at Sattva Yoga Classes in Tambaram, Chennai — beginner hatha yoga, group batches, prenatal yoga, weekend sessions & corporate wellness. Find the right class for your goals.",
   alternates: {
-    canonical: "https://sattvayogaclasses.in/classes",
+    canonical: "https://www.sattvayogaclasses.in/classes",
   },
 };
 
@@ -17,7 +17,7 @@ const classesSeoSchema = {
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
   name: "Sattva Yoga Classes",
-  url: "https://sattvayogaclasses.in/classes",
+  url: "https://www.sattvayogaclasses.in/classes",
   description:
     "Yoga classes in Tambaram, Chennai — personal foundations, daily group batches, weekend sessions, and prenatal yoga.",
   address: {

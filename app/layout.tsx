@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sattvayogaclasses.in"),
+  metadataBase: new URL("https://www.sattvayogaclasses.in"),
   title: {
     default: "Sattva Yoga Classes | Best Yoga Classes in Tambaram, Chennai",
     template: "%s | Sattva Yoga Classes",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://sattvayogaclasses.in",
+    url: "https://www.sattvayogaclasses.in",
     siteName: "Sattva Yoga Classes",
     title: "Sattva Yoga Classes | Best Yoga Classes in Tambaram, Chennai",
     description:
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://sattvayogaclasses.in",
+    canonical: "https://www.sattvayogaclasses.in",
   },
 };
 

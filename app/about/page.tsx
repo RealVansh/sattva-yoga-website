@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Meet Jeyanthi V — certified yoga therapist and instructor at Sattva Yoga Classes, Tambaram, Chennai. Specializing in hatha yoga, prenatal yoga, and therapeutic yoga for all levels.",
   alternates: {
-    canonical: "https://sattvayogaclasses.in/about",
+    canonical: "https://www.sattvayogaclasses.in/about",
   },
 };
 
@@ -22,7 +22,7 @@ const aboutSeoSchema = {
   worksFor: {
     "@type": "HealthAndBeautyBusiness",
     name: "Sattva Yoga Classes",
-    url: "https://sattvayogaclasses.in",
+    url: "https://www.sattvayogaclasses.in",
   },
   knowsAbout: [
     "Hatha Yoga",

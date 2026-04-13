@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   // Updated to your official domain!
-  const baseUrl = 'https://sattvayogaclasses.in' 
+  const baseUrl = 'https://www.sattvayogaclasses.in' 
  
   return [
     {
