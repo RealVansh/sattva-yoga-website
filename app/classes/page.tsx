@@ -97,6 +97,9 @@ export default function ClassesPage() {
       </div>
 
       <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <p className="mb-6 text-sm font-semibold text-brand-brown-300">
+          All batch sessions are 60 minutes.
+        </p>
         <div className="grid gap-6 md:grid-cols-2 items-start">
           {classes.map((item, index) => (
             <div key={item.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>

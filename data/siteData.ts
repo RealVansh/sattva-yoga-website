@@ -13,6 +13,7 @@ export type YogaClass = {
     id: string;
     name: string;
     time: string;
+    mode?: "offline" | "online" | "online-offline";
     status: "active" | "forming" | "custom";
   }[];
 };
@@ -107,6 +108,7 @@ export const classes: YogaClass[] = [
         id: "personal-flex",
         name: "Personal Session",
         time: "Flexible time of your choice",
+        mode: "online-offline",
         status: "custom",
       },
     ],
@@ -122,18 +124,21 @@ export const classes: YogaClass[] = [
         id: "daily-morning",
         name: "Morning Batch",
         time: "6:30 AM - 7:30 AM",
+        mode: "online-offline",
         status: "active",
       },
       {
         id: "daily-ladies",
         name: "Ladies Only Batch",
         time: "10:50 AM - 11:50 AM",
+        mode: "online-offline",
         status: "active",
       },
       {
         id: "daily-evening",
         name: "Evening Batch",
         time: "5:00 PM - 6:00 PM",
+        mode: "online-offline",
         status: "forming",
       },
     ],
@@ -149,6 +154,7 @@ export const classes: YogaClass[] = [
         id: "weekend-morning",
         name: "Saturday & Sunday",
         time: "8:00 AM - 9:00 AM",
+        mode: "online-offline",
         status: "active",
       },
     ],
@@ -164,6 +170,7 @@ export const classes: YogaClass[] = [
         id: "prenatal-flex",
         name: "Personalized Session",
         time: "Flexible time of your choice",
+        mode: "online-offline",
         status: "custom",
       },
     ],

@@ -15,6 +15,13 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
 
   const hasBatches = yogaClass.batches && yogaClass.batches.length > 0;
 
+  const getModeLabel = (mode?: "offline" | "online" | "online-offline") => {
+    if (mode === "offline") return "Offline";
+    if (mode === "online") return "Online";
+    if (mode === "online-offline") return "Online & Offline";
+    return null;
+  };
+
   const handleEnquireClick = (e: React.MouseEvent, batchName: string, batchTime: string) => {
     e.stopPropagation();
     setSelectedBatch({ name: batchName, time: batchTime });
@@ -43,13 +50,6 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
           <p className={`mt-3 min-h-[4.5rem] text-sm leading-6 text-brand-brown-200`}>
           {yogaClass.description}
         </p>
-
-        <div className="mt-4 w-fit inline-flex items-center gap-2 rounded-full bg-brand-gold-50 px-3.5 py-1.5 text-sm font-semibold text-brand-brown-400">
-          <svg className="h-4 w-4 text-brand-gold-400" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          {yogaClass.duration}
-        </div>
 
         <ul
           className="mt-4 flex flex-wrap gap-2"
@@ -86,6 +86,11 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <h4 className="font-semibold text-brand-brown-400">{batch.name}</h4>
+                    {getModeLabel(batch.mode) && (
+                      <span className="inline-flex items-center rounded-md bg-brand-green-50 px-2 py-0.5 text-xs font-medium text-brand-green-500">
+                        {getModeLabel(batch.mode)}
+                      </span>
+                    )}
                     {batch.status === 'forming' && (
                       <span className="inline-flex items-center rounded-md bg-brand-brown-100 px-2 py-0.5 text-xs font-medium text-brand-brown-400">
                         Batch Paused

@@ -160,6 +160,9 @@ export default function Home() {
           description="From beginner flows to corporate wellness sessions, programs are designed for real progress.
 "
         />
+        <p className="mt-4 text-sm font-semibold text-brand-brown-300">
+          All batch sessions are 60 minutes.
+        </p>
         <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
           {classes.map((item, index) => (
             <div key={item.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
