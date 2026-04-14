@@ -131,7 +131,7 @@ export default function AboutPage() {
               
               <div className="relative h-44 w-44 overflow-hidden rounded-full ring-8 ring-white shadow-2xl z-10">
                 <Image 
-                  src="/images/jeyanthi_portrait.jpg" 
+                  src="/images/jeyanthi_portrait.JPG" 
                   alt="Jeyanthi V Portrait" 
                   fill
                   className="object-cover object-[center_15%]"
