@@ -9,7 +9,6 @@ const galleryImages = [
   "IMG_0894.JPG",
   "IMG_0922.JPG",
   "IMG_0926.JPG",
-  "IMG_0929.JPG",
   "IMG_0933.JPG",
   "IMG_0936.JPG",
   "IMG_0998.JPG",
@@ -24,29 +23,26 @@ const galleryImages = [
   "IMG_6603.JPG",
   "IMG_6613.JPG",
   "IMG_6619.JPG",
+  "IMG_6620.JPG",
+  "IMG_6621.JPG",
+  "IMG_6622.JPG",
+  "IMG_6623.JPG",
+  "IMG_6624.JPG",
+  "IMG_6625.JPG"
 ];
 
-// Define layout patterns — every 6 images repeats this pattern
-// "tall" = spans 2 rows, "wide" = spans 2 columns, "featured" = spans 2x2, "normal" = 1x1
-const layoutPattern: Array<"featured" | "tall" | "wide" | "normal"> = [
-  "featured", "normal", "normal",
-  "normal", "tall", "normal",
+// Define layout patterns — simpler pattern to minimize gaps
+// Most items are normal (1x1) with occasional tall (2 rows) for visual rhythm
+const layoutPattern: Array<"tall" | "normal"> = [
+  "normal", "normal", "normal",
+  "tall", "normal", "normal",
 ];
 
 function getLayoutClass(index: number): string {
   const patternIndex = index % layoutPattern.length;
   const type = layoutPattern[patternIndex];
 
-  switch (type) {
-    case "featured":
-      return "col-span-2 row-span-2";
-    case "tall":
-      return "row-span-2";
-    case "wide":
-      return "col-span-2";
-    default:
-      return "";
-  }
+  return type === "tall" ? "row-span-2" : "";
 }
 
 export default function GalleryPage() {
