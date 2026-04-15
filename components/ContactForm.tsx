@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 
 import Button from "@/components/Button";
+import { classes } from "@/data/siteData";
 
 // Add your email address here!
 const RECEIVER_EMAIL = "vanshv0920@gmail.com"; 
@@ -11,8 +12,14 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [preferredType, setPreferredType] = useState("");
+  const [preferredBatch, setPreferredBatch] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Get batch timings for group class
+  const groupClass = classes.find(c => c.title === "Daily Group Classes");
+  const groupBatches = groupClass?.batches || [];
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -29,6 +36,8 @@ export default function ContactForm() {
           name,
           phone,
           message,
+          preferredType,
+          preferredBatch: preferredType === "group" ? preferredBatch : "N/A",
           _subject: `New Yoga Class Inquiry from ${name}`,
         }),
       });
@@ -36,6 +45,8 @@ export default function ContactForm() {
       setName("");
       setPhone("");
       setMessage("");
+      setPreferredType("");
+      setPreferredBatch("");
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
@@ -80,6 +91,58 @@ export default function ContactForm() {
 
       <div>
         <label
+          htmlFor="preferredType"
+          className="mb-1.5 block text-sm font-semibold text-brand-brown-400"
+        >
+          What are you interested in?
+        </label>
+        <select
+          id="preferredType"
+          name="preferredType"
+          value={preferredType}
+          onChange={(e) => {
+            setPreferredType(e.target.value);
+            setPreferredBatch("");
+          }}
+          required
+          className="w-full rounded-xl border border-brand-cream-200 bg-brand-cream-50 px-4 py-3 text-sm text-brand-brown-400 outline-none transition-all focus:border-brand-green-200 focus:ring-2 focus:ring-brand-green-50"
+        >
+          <option value="">Choose an option</option>
+          <option value="personal">Personal (1-on-1)</option>
+          <option value="group">Group Classes</option>
+          <option value="prenatal">Prenatal & Postnatal</option>
+          <option value="corporate">Corporate Wellness</option>
+        </select>
+      </div>
+
+      {preferredType === "group" && (
+        <div>
+          <label
+            htmlFor="preferredBatch"
+            className="mb-1.5 block text-sm font-semibold text-brand-brown-400"
+          >
+            Preferred Batch Timing
+          </label>
+          <select
+            id="preferredBatch"
+            name="preferredBatch"
+            value={preferredBatch}
+            onChange={(e) => setPreferredBatch(e.target.value)}
+            required
+            className="w-full rounded-xl border border-brand-cream-200 bg-brand-cream-50 px-4 py-3 text-sm text-brand-brown-400 outline-none transition-all focus:border-brand-green-200 focus:ring-2 focus:ring-brand-green-50"
+          >
+            <option value="">Select a batch</option>
+            {groupBatches.map((batch) => (
+              <option key={batch.id} value={batch.time}>
+                {batch.name} — {batch.time}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
+      <div>
+        <label
           htmlFor="phone"
           className="mb-1.5 block text-sm font-semibold text-brand-brown-400"
         >
@@ -89,11 +152,13 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           type="tel"
+          inputMode="numeric"
+          pattern="[0-9]*"
           value={phone}
-          onChange={(event) => setPhone(event.target.value)}
+          onChange={(event) => setPhone(event.target.value.replace(/[^0-9]/g, ''))}
           required
           className="w-full rounded-xl border border-brand-cream-200 bg-brand-cream-50 px-4 py-3 text-sm text-brand-brown-400 outline-none transition-all focus:border-brand-green-200 focus:ring-2 focus:ring-brand-green-50 placeholder:text-brand-brown-100"
-          placeholder="+91 9941764814"
+          placeholder="Your contact number"
         />
       </div>
 
