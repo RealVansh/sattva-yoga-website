@@ -7,7 +7,7 @@ import { classes } from "@/data/siteData";
 export const metadata: Metadata = {
   title: "Classes",
   description:
-    "Explore yoga classes at Sattva Yoga Classes in Tambaram, Chennai — beginner hatha yoga, group batches, prenatal yoga, weekend sessions & corporate wellness. Find the right class for your goals.",
+    "Explore yoga classes at Sattva Yoga Classes in Tambaram, Chennai — beginner hatha yoga, group batches, PCOD & PCOS yoga for women, prenatal yoga, weekend sessions & corporate wellness. Find the right class for your goals.",
   alternates: {
     canonical: "https://www.sattvayogaclasses.in/classes",
   },
@@ -62,6 +62,15 @@ const classesSeoSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
+          name: "Women's Wellness — PCOD & PCOS Yoga",
+          description:
+            "Specialized women-only yoga classes for PCOD, PCOS, hormonal imbalance, and reproductive health in Chennai.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
           name: "Prenatal & Postnatal Yoga",
           description:
             "Specialized pregnancy yoga with certified instruction in Chennai.",
@@ -88,7 +97,7 @@ export default function ClassesPage() {
               centered
             />
             <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-6 text-brand-brown-200">
-              Whether you are looking for yoga for beginners, prenatal yoga during pregnancy, yoga for weight loss, or therapeutic yoga for back pain in Chennai — our Tambaram studio has a class designed just for you.
+              Whether you are looking for yoga for beginners, yoga for PCOD and PCOS, prenatal yoga during pregnancy, yoga for weight loss, or therapeutic yoga for back pain in Chennai — our Tambaram studio has a class designed just for you.
             </p>
             <p className="mx-auto mt-6 max-w-3xl rounded-2xl border border-brand-green-100 bg-brand-green-50 px-5 py-3 text-center text-sm font-semibold text-brand-green-500">
               New to yoga? Start with Personal Foundations, then move to group batches.

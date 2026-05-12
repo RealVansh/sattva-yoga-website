@@ -144,6 +144,22 @@ export const classes: YogaClass[] = [
     ],
   },
   {
+    title: "Yoga for PCOD & PCOS",
+    description:
+      "A dedicated womens only morning batch designed specifically for those managing PCOD, PCOS, irregular periods, and other reproductive health concerns.",
+    duration: "60 minutes",
+    benefits: ["PCOD & PCOS Support", "Hormonal Balance", "Women Only"],
+    batches: [
+      {
+        id: "pcod-pcos-morning",
+        name: "Women's Morning Batch",
+        time: "8:00 AM - 9:00 AM",
+        mode: "offline",
+        status: "active",
+      },
+    ],
+  },
+  {
     title: "Weekend Batch",
     description:
       "A dedicated weekend session specifically tailored for busy professionals or students who can only commit to practice on Saturdays and Sundays.",

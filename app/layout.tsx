@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "yoga classes near me",
     "yoga for back pain Chennai",
     "yoga teacher in Tambaram",
+    "yoga for PCOD Chennai",
+    "yoga for PCOS Chennai",
+    "PCOD PCOS yoga classes",
   ],
   verification: {
     google: "934OE6vbSrcHVP79YZ2pJy5YtgqPcudSgHEoWBAglPk",
