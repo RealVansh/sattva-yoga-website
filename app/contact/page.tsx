@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h2 className="text-lg font-bold text-brand-brown-400">
-                  Studio Location
+                  Our Location
                 </h2>
               </div>
               <iframe

@@ -111,6 +111,7 @@ export default function ContactForm() {
           <option value="personal">Personal (1-on-1)</option>
           <option value="group">Group Classes</option>
           <option value="prenatal">Prenatal & Postnatal</option>
+          <option value="pcod-pcos">Yoga for PCOD & PCOS</option>
           <option value="corporate">Corporate Wellness</option>
         </select>
       </div>

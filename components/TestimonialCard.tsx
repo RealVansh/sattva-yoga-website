@@ -6,13 +6,13 @@ type TestimonialCardProps = {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <article className="relative rounded-2xl border border-brand-cream-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-gold-200 overflow-hidden">
+    <article className="relative rounded-2xl border border-brand-cream-200 bg-white p-7 shadow-sm card-glow hover:border-brand-gold-200 overflow-hidden">
       {/* Left accent border */}
-      <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-brand-gold-300 to-brand-green-200" />
+      <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-brand-gold-300 via-brand-green-200 to-brand-gold-200" />
 
       {/* Quote icon */}
-      <div className="mb-4 text-brand-gold-200">
-        <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+      <div className="mb-4 text-brand-gold-200/70">
+        <svg className="h-9 w-9" fill="currentColor" viewBox="0 0 24 24">
           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151c-2.432.917-3.995 3.638-3.995 5.849H10v10H0z" />
         </svg>
       </div>
@@ -25,7 +25,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         {Array.from({ length: testimonial.rating }).map((_, index) => (
           <svg
             key={`${testimonial.name}-star-${index}`}
-            className="h-4 w-4 fill-current"
+            className="h-4.5 w-4.5 fill-current"
             viewBox="0 0 20 20"
             aria-hidden="true"
           >
@@ -35,13 +35,13 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
       </div>
 
       {/* Comment */}
-      <p className="text-sm leading-6 text-brand-brown-300 italic">
+      <p className="text-base leading-7 text-brand-brown-300 italic">
         &ldquo;{testimonial.comment}&rdquo;
       </p>
 
       {/* Author */}
-      <div className="mt-4 flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-green-50 text-brand-green-500 font-bold text-sm">
+      <div className="mt-5 flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-green-50 to-brand-green-100 text-brand-green-500 font-bold text-sm">
           {testimonial.name.charAt(0)}
         </div>
         <div>

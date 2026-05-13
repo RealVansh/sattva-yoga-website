@@ -97,7 +97,7 @@ export default function ClassesPage() {
               centered
             />
             <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-6 text-brand-brown-200">
-              Whether you are looking for yoga for beginners, yoga for PCOD and PCOS, prenatal yoga during pregnancy, yoga for weight loss, or therapeutic yoga for back pain in Chennai — our Tambaram studio has a class designed just for you.
+              Whether you are looking for yoga for beginners, yoga for PCOD and PCOS, prenatal yoga during pregnancy, yoga for weight loss, or therapeutic yoga for back pain — join us offline in Tambaram, Chennai or connect online from anywhere in the world.
             </p>
             <p className="mx-auto mt-6 max-w-3xl rounded-2xl border border-brand-green-100 bg-brand-green-50 px-5 py-3 text-center text-sm font-semibold text-brand-green-500">
               New to yoga? Start with Personal Foundations, then move to group batches.
@@ -107,7 +107,7 @@ export default function ClassesPage() {
 
       <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <p className="mb-6 text-sm font-semibold text-brand-brown-300">
-          All batch sessions are 60 minutes.
+          All batch sessions are <span className="bg-brand-gold-200/50 px-1 rounded">60 minutes</span>.
         </p>
         <div className="grid gap-6 md:grid-cols-2 items-start">
           {classes.map((item, index) => (

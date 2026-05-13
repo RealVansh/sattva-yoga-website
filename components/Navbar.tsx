@@ -34,13 +34,15 @@ export default function Navbar() {
       <div
         className={`absolute inset-0 transition-all duration-500 ${
           scrolled
-            ? "bg-white/70 backdrop-blur-xl shadow-[0_1px_3px_rgba(93,53,28,0.08)]"
+            ? "bg-white/60 backdrop-blur-2xl shadow-[0_1px_3px_rgba(93,53,28,0.06)] border-b border-white/20"
             : "bg-transparent"
         }`}
       />
 
       <nav
-        className="relative mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-3 lg:px-8"
+        className={`relative mx-auto flex max-w-screen-2xl items-center justify-between px-6 transition-all duration-300 lg:px-8 ${
+          scrolled ? "py-2.5" : "py-3"
+        }`}
         aria-label="Main Navigation"
       >
         {/* Logo */}
@@ -99,8 +101,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ${
                     isActive
-                      ? "text-brand-green-500"
-                      : "text-brand-brown-300 hover:text-brand-brown-400"
+                      ? "text-brand-green-500 bg-brand-green-50/60"
+                      : "text-brand-brown-300 hover:text-brand-brown-400 hover:bg-brand-cream-100/60"
                   }`}
                 >
                   {link.label}

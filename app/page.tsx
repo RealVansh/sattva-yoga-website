@@ -95,55 +95,65 @@ export default function Home() {
       <ScrollSpyNav />
       <HeroSection />
 
-      {/* About Preview */}
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24">
-        <div className="animate-fade-in">
-          <SectionTitle
-            eyebrow="About"
-            title="Personalized yoga rooted in holistic wellness"
-            description="Recognized as one of the best yoga classes in Chennai, Sattva Yoga Classes helps you build consistency through mindful movement, breathwork, and practical routines that fit your life."
-          />
-        </div>
-        <p className="mt-3 max-w-3xl leading-7 text-brand-brown-200 animate-fade-in delay-200">
-          Whether you are starting from zero or returning to practice, each
-          session is adapted to your body, goals, and energy levels. Our hatha
-          yoga classes combine posture alignment, mobility, and calming
-          techniques to support long-term physical and mental well-being.
-          Searching for yoga classes in Tambaram, Chennai? Sattva Yoga Classes
-          offers both personal and group formats with focused guidance — ideal
-          for beginners, working professionals, and anyone looking for yoga
-          for back pain, stress relief, or overall fitness in Chennai.
-        </p>
-        <div className="mt-6 animate-fade-in delay-300">
-          <Button href="/about" variant="secondary">
-            Learn More About the Instructor
-          </Button>
+      {/* ── About Preview ─────────────────────────────── */}
+      <div className="section-divider" />
+      <section
+        id="about"
+        className="relative overflow-hidden py-24 md:py-32 scroll-mt-24 section-glow-warm grain-overlay"
+      >
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="animate-fade-in">
+            <SectionTitle
+              eyebrow="About"
+              title="Personalized yoga rooted in holistic wellness"
+              description="Recognized as one of the best yoga classes in Chennai, Sattva Yoga Classes helps you build consistency through mindful movement, breathwork, and practical routines that fit your life."
+            />
+          </div>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-brand-brown-200 animate-fade-in delay-200">
+            Whether you are starting from zero or returning to practice, each
+            session is adapted to your body, goals, and energy levels. Our hatha
+            yoga classes combine posture alignment, mobility, and calming
+            techniques to support long-term physical and mental well-being.
+            Searching for yoga classes in Tambaram, Chennai? Sattva Yoga Classes
+            offers both personal and group formats with focused guidance — ideal
+            for beginners, working professionals, and anyone looking for yoga
+            for back pain, stress relief, or overall fitness in Chennai.
+          </p>
+          <div className="mt-8 animate-fade-in delay-300">
+            <Button href="/about" variant="secondary">
+              Learn More About the Instructor
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Benefits */}
-      <section id="benefits" className="bg-white py-20 scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      {/* ── Benefits ──────────────────────────────────── */}
+      <div className="section-divider" />
+      <section
+        id="benefits"
+        className="relative overflow-hidden bg-white py-24 md:py-32 scroll-mt-24 section-glow-green"
+      >
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <SectionTitle
             eyebrow="Benefits"
             title="Why students choose Sattva Yoga Classes"
             description="From yoga for beginners to advanced therapeutic sessions, here is what sets us apart."
             centered
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, index) => (
               <article
                 key={benefit.title}
-                className="group rounded-2xl border border-brand-cream-200 bg-brand-cream-50 p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:border-brand-gold-200 animate-fade-in-up"
+                className="group rounded-2xl border border-brand-cream-200 bg-gradient-to-b from-brand-cream-50 to-white p-8 text-center shadow-sm card-glow hover:-translate-y-2 hover:border-brand-green-100 animate-fade-in-up"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green-50 text-brand-green-400 transition-all duration-300 group-hover:bg-brand-gold-50 group-hover:text-brand-gold-400">
+                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-green-50 to-brand-green-100/50 text-brand-green-400 transition-all duration-300 group-hover:from-brand-gold-50 group-hover:to-brand-gold-100/50 group-hover:text-brand-gold-400 group-hover:scale-110">
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-bold text-brand-brown-400">
                   {benefit.title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-brand-brown-200">
+                <p className="mt-3 text-sm leading-7 text-brand-brown-200">
                   {benefit.description}
                 </p>
               </article>
@@ -152,30 +162,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Classes Preview */}
-      <section id="classes" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24">
-        <SectionTitle
-          eyebrow="Classes"
-          title="Yoga classes for every goal"
-          description="From beginner flows to corporate wellness sessions, programs are designed for real progress.
-"
-        />
-        <p className="mt-4 text-sm font-semibold text-brand-brown-300">
-          All batch sessions are 60 minutes.
-        </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 items-start">
-          {classes.map((item, index) => (
-            <div key={item.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-              <ClassCard yogaClass={item} />
-            </div>
-          ))}
+      {/* ── Classes Preview ───────────────────────────── */}
+      <div className="section-divider" />
+      <section
+        id="classes"
+        className="relative overflow-hidden bg-brand-cream-50 py-24 md:py-32 scroll-mt-24 section-glow-gold"
+      >
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionTitle
+            eyebrow="Classes"
+            title="Yoga classes for every goal"
+            description="From beginner flows to corporate wellness sessions, programs are designed for real progress."
+          />
+          <p className="mt-4 text-sm font-semibold text-brand-brown-300">
+            All batch sessions are <span className="bg-brand-gold-200/50 px-1 rounded">60 minutes</span>.
+          </p>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 items-start">
+            {classes.map((item, index) => (
+              <div key={item.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+                <ClassCard yogaClass={item} />
+              </div>
+            ))}
+          </div>
         </div>
-
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="bg-white py-20 overflow-hidden scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      {/* ── Testimonials ──────────────────────────────── */}
+      <div className="section-divider" />
+      <section
+        id="testimonials"
+        className="relative overflow-hidden bg-white py-24 md:py-32 scroll-mt-24"
+      >
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           <SectionTitle
             eyebrow="Testimonials"
             title="What students are saying"
@@ -183,27 +201,31 @@ export default function Home() {
             centered
           />
         </div>
-        <div className="mt-12 w-full">
+        <div className="mt-14 w-full">
           <TestimonialCarousel testimonials={testimonials} />
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 scroll-mt-24" id="contact">
-        <div className="rounded-3xl bg-gradient-to-br from-brand-green-400 to-brand-green-600 px-8 py-12 text-white shadow-xl sm:px-12 relative overflow-hidden">
+      {/* ── CTA ───────────────────────────────────────── */}
+      <section className="relative mx-auto max-w-7xl px-6 py-24 md:py-32 lg:px-8 scroll-mt-24" id="contact">
+        <div className="rounded-3xl bg-gradient-to-br from-brand-green-400 to-brand-green-600 px-8 py-14 text-white shadow-2xl sm:px-14 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-brand-gold-300/10 blur-2xl" />
-          <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/5 blur-2xl" />
+          <div className="absolute top-0 right-0 h-56 w-56 rounded-full bg-brand-gold-300/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-white/5 blur-3xl" />
+          <div className="absolute top-1/2 right-1/4 h-32 w-32 rounded-full bg-brand-green-300/10 blur-2xl" />
 
           <div className="relative">
-            <h2 className="text-3xl font-bold tracking-tight">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-gold-300/80">
+              Ready to begin?
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
               Join a session today
             </h2>
-            <p className="mt-3 max-w-2xl text-brand-green-100/90">
-              Book a free trial and start your personalized yoga journey with
+            <p className="mt-4 max-w-2xl text-lg leading-8 text-brand-green-100/90">
+              Reach out today and start your personalized yoga journey with
               calm, consistency, and confidence.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Button
                 href="/contact"
                 variant="secondary"
